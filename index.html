@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الوحدة 11 – الدرس 2 | Unit 11 – Lesson 2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#eef7f3;--sf:#fff;--s2:#e0f0e9;--ink:#12302a;--mut:#4f6d65;--p:#0f8f6f;--a:#ffb703;--ok:#1f9d63;--bad:#d6336c;--ln:#c4dfd4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1f1a;--sf:#142d26;--s2:#1c3d34;--ink:#e8f7f1;--mut:#a3c7bb;--p:#3fd1a6;--ln:#2a5246}}
+:root[data-theme="dark"]{--bg:#0c1f1a;--sf:#142d26;--s2:#1c3d34;--ink:#e8f7f1;--mut:#a3c7bb;--p:#3fd1a6;--ln:#2a5246}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--ink);font-family:"Cairo",system-ui,sans-serif;line-height:1.8;min-height:100vh;padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+header{padding:28px 20px 8px;max-width:1000px;margin:auto}
+h1{font-size:clamp(1.6rem,5vw,2.7rem);font-weight:900;line-height:1.3}h1 small{display:block;font-size:.5em;color:var(--mut);direction:ltr}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 20px;display:flex;gap:8px;overflow-x:auto;max-width:1000px;margin:auto}
+nav button{flex:none;font:inherit;font-weight:700;border:2px solid var(--ln);background:var(--sf);color:var(--ink);padding:5px 16px;border-radius:999px;cursor:pointer;line-height:1.3;min-height:44px}
+nav button small{display:block;font-weight:400;color:var(--mut);font-size:.75em}
+nav button[aria-current=true]{background:var(--p);border-color:var(--p);color:#fff}nav button[aria-current=true] small{color:#fff}
+button,input,textarea{touch-action:manipulation}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+main{max-width:1000px;margin:auto;padding:8px 20px 60px}section[hidden]{display:none}
+h2{font-size:1.7rem;font-weight:900;margin:8px 0 12px}h2 small{display:block;font-size:.6em;color:var(--mut);direction:ltr}
+.sec{font-size:1.4rem;font-weight:900;margin:26px 0 8px;padding:6px 14px;background:var(--p);color:#fff;border-radius:10px}.sec small{opacity:.85;font-weight:400;direction:ltr;display:block;font-size:.7em}
+.it{background:var(--sf);border:2px solid var(--ln);border-radius:16px;padding:14px 16px;margin-bottom:16px}
+.it h3{font-size:1.15rem;margin-bottom:4px}.it h3 span{color:var(--mut);font-weight:400;direction:ltr;display:inline-block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 10px}.two p{background:var(--s2);border-radius:10px;padding:8px 12px}
+.lb{font-weight:700;margin:8px 0 4px;color:var(--p)}
+.ed textarea{width:100%;font:15px/1.6 ui-monospace,Menlo,Consolas,monospace;direction:ltr;text-align:left;background:#12302a;color:#d9fff2;border:2px solid var(--ln);border-radius:12px;padding:10px;resize:vertical;min-height:70px;tab-size:2}
+.ed .out{direction:ltr;text-align:left;background:var(--s2);border-radius:10px;padding:8px 12px;margin-top:6px;min-height:40px;white-space:pre-wrap;font:14px/1.5 ui-monospace,monospace;color:var(--ink)}.ed .out.ok{border-left:6px solid var(--ok)}.ed .out.no{border-left:6px solid var(--bad)}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.bt{font:inherit;font-weight:700;border:0;border-radius:10px;padding:6px 16px;background:var(--p);color:#fff;cursor:pointer;min-height:42px}.bt.g{background:var(--s2);color:var(--ink)}.bt.y{background:var(--a);color:#12302a}
+.qc{background:var(--sf);border:2px solid var(--ln);border-radius:14px;padding:14px 18px;margin-bottom:12px}.qc.ok{border-color:var(--ok)}.qc.no{border-color:var(--bad)}
+.qc .q{font-weight:700}.qc .q span{display:block;color:var(--mut);font-weight:400}
+.cb{direction:ltr;text-align:left;background:#12302a;color:#d9fff2;padding:8px 12px;border-radius:10px;margin:6px 0;white-space:pre;overflow-x:auto;font:14px/1.5 ui-monospace,monospace}
+.op{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;direction:ltr}
+.op button{font:inherit;padding:10px;border-radius:10px;border:2px solid var(--ln);background:var(--s2);color:var(--ink);cursor:pointer;text-align:left;min-height:46px}
+.op button.sel{border-color:var(--p);background:var(--p);color:#fff}.op button.ok{background:var(--ok);border-color:var(--ok);color:#fff}.op button.no{background:var(--bad);border-color:var(--bad);color:#fff}
+input.tx,textarea.tx{width:100%;font:16px ui-monospace,monospace;direction:ltr;text-align:left;padding:8px;margin-top:8px;border-radius:10px;border:2px solid var(--ln);background:var(--s2);color:var(--ink)}
+.an{margin-top:8px;padding:8px 12px;border-radius:10px;background:var(--s2)}.an[hidden]{display:none}
+.gm{background:var(--sf);border:2px solid var(--ln);border-radius:16px;padding:18px;text-align:center}
+.hud{display:flex;justify-content:space-between;font-weight:700;margin-bottom:8px}
+.tm{height:10px;background:var(--ln);border-radius:6px;overflow:hidden;margin-bottom:12px}.tm div{height:100%;background:var(--a);width:100%}
+.gq{font-size:1.1rem;font-weight:700;margin-bottom:10px}.gq span{display:block;direction:ltr;color:var(--mut);font-size:1rem;font-weight:400}
+.big{font-size:3rem;font-weight:900}
+.trk{display:flex;direction:ltr;gap:4px;overflow-x:auto;padding:8px 2px;margin:8px 0;justify-content:center}
+.cl{flex:none;width:46px;height:52px;border-radius:10px;background:var(--s2);border:2px solid var(--ln);display:flex;align-items:center;justify-content:center;font-size:1.5rem;position:relative}
+.cl.rb{background:var(--a);border-color:var(--a);transform:translateY(-6px);transition:transform .2s}
+.cl.cr{background:var(--bad)}
+.tg{text-align:left;direction:ltr}
+@media(max-width:600px){header{padding:16px 14px 4px}main{padding:6px 12px 40px}nav{padding:8px 12px}h2{font-size:1.4rem}.two{grid-template-columns:1fr}.op{grid-template-columns:1fr}.it{padding:12px}.gm{padding:12px}.big{font-size:2.4rem}.cl{width:38px;height:46px}.sec{font-size:1.2rem}}
+@media(min-width:601px) and (max-width:1100px){main,header,nav{max-width:860px}}
+</style>
+</head>
+<body>
+<header><h1>الوحدة 11 – الدرس 2: الشروط والتكرار والدوال<small>Unit 11 – Lesson 2: Conditions, Loops &amp; Functions</small></h1></header>
+<nav id="nav" aria-label="Sections"></nav>
+<main id="app"></main>
+<script>
+const $=s=>document.querySelector(s),sh=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const tabs=[["learn","الشرح والتطبيق","Lesson & practice"],["quiz","أسئلة البنك","Question bank"],["game","لعبة التدريبات","Exercises game"],["code","لعبة الروبوت","Code Robot"]];
+$("#nav").innerHTML=tabs.map(t=>`<button data-t="${t[0]}">${t[1]}<small>${t[2]}</small></button>`).join("");
+/* ---------- safe-ish code runner ---------- */
+function fmt(v){return typeof v=="string"?v:(v&&typeof v=="object")?JSON.stringify(v):String(v)}
+function exec(code,api){const out=[];const cons={log:(...a)=>out.push(a.map(fmt).join(" "))};
+const src=code.replace(/\b(while|for)\s*\(([^)]*)\)\s*\{/g,'$1($2){if(++__n>1e5)throw new Error("Loop too long / التكرار طويل جداً");').replace(/\bdo\s*\{/g,'do{if(++__n>1e5)throw new Error("Loop too long / التكرار طويل جداً");');
+const names=Object.keys(api||{});
+try{new Function("console","prompt","alert",...names,"let __n=0;\n"+src)(cons,()=>"",m=>out.push(fmt(m)),...names.map(k=>api[k]))}
+catch(e){return{out,err:e instanceof EvalError?"المتصفح منع تشغيل الكود هنا. افتحي نسخة الملف على جهازك. / Code running is blocked here; open the downloaded file version.":(e.message||String(e))}}
+return{out,err:null}}
+/* ---------- LESSON ---------- */
+// [AR title, EN title, AR text, EN text, example, AR task, EN task, starter, solution]
+const S=[
+["١. الجمل الشرطية","1. Conditional statements",[
+["جملة if","The if statement","تنفّذ الكود فقط إذا كان الشرط true.","Runs code only if the condition is true.","let age = 20;\nif (age >= 18) {\n  console.log(\"Adult\");\n}","لو score أكبر من أو تساوي 60 اطبعي Pass.","If score is 60 or more, print Pass.","let score = 75;\n","let score = 75;\nif (score >= 60) {\n  console.log(\"Pass\");\n}"],
+["جملة else","The else statement","else تُنفَّذ لما يكون شرط if غير صحيح.","else runs when the if condition is false.","let score = 55;\nif (score >= 60) {\n  console.log(\"Pass\");\n} else {\n  console.log(\"Failed\");\n}","لو temp أكبر من 30 اطبعي Hot وإلا اطبعي Cool.","If temp is above 30 print Hot, otherwise print Cool.","let temp = 35;\n","let temp = 35;\nif (temp > 30) {\n  console.log(\"Hot\");\n} else {\n  console.log(\"Cool\");\n}"],
+["جملة else if","The else if statement","لفحص أكثر من شرط بالترتيب.","Checks several conditions in order.","let m = 85;\nif (m >= 90) console.log(\"A\");\nelse if (m >= 75) console.log(\"B\");\nelse console.log(\"C\");","marks: من 90 فأكثر A، من 75 B، من 50 C، غير كده F.","marks: 90+ → A, 75+ → B, 50+ → C, otherwise F.","let marks = 65;\n","let marks = 65;\nif (marks >= 90) {\n  console.log(\"A\");\n} else if (marks >= 75) {\n  console.log(\"B\");\n} else if (marks >= 50) {\n  console.log(\"C\");\n} else {\n  console.log(\"F\");\n}"],
+["العامل الثلاثي ? :","Ternary operator","شكل مختصر لـ if…else يرجّع قيمة: condition ? value1 : value2","A short form of if…else that returns a value: condition ? value1 : value2","let marks = 70;\nlet result = marks >= 40 ? \"pass\" : \"fail\";\nconsole.log(\"You \" + result);","اطبعي Even لو n زوجي وإلا Odd باستخدام ? :","Print Even if n is even, else Odd, using ? :","let n = 7;\n","let n = 7;\nconsole.log(n % 2 === 0 ? \"Even\" : \"Odd\");"],
+["جملة switch","The switch statement","تقارن قيمة واحدة بعدة حالات case، و break توقف التنفيذ، و default لو مفيش تطابق.","Compares one value with many cases; break stops execution; default runs if nothing matches.","let games = \"football\";\nswitch (games) {\n  case \"cricket\":\n    console.log(\"Cricket!\");\n    break;\n  case \"football\":\n    console.log(\"I love football!\");\n    break;\n  default:\n    console.log(\"Other games\");\n}","day = 1 اطبعي Sat، و2 اطبعي Sun، وغير كده Other.","day 1 → Sat, 2 → Sun, anything else → Other.","let day = 2;\n","let day = 2;\nswitch (day) {\n  case 1:\n    console.log(\"Sat\");\n    break;\n  case 2:\n    console.log(\"Sun\");\n    break;\n  default:\n    console.log(\"Other\");\n}"]]],
+["٢. الحلقات التكرارية","2. Loops",[
+["حلقة while","The while loop","تكرر الكود طالما الشرط true، وتفحص الشرط أولاً.","Repeats while the condition is true; checks the condition first.","let i = 0;\nwhile (i < 5) {\n  console.log(\"The number is \" + i);\n  i++;\n}","اطبعي الأرقام 1 و2 و3 باستخدام while.","Print 1, 2, 3 using while.","let i = 1;\n","let i = 1;\nwhile (i <= 3) {\n  console.log(i);\n  i++;\n}"],
+["حلقة do…while","The do…while loop","تنفّذ الكود مرة واحدة على الأقل ثم تفحص الشرط.","Runs the code at least once, then checks the condition.","let i = 10;\ndo {\n  console.log(\"i = \" + i);\n  i++;\n} while (i < 5);","x = 100 والشرط x < 5 خطأ، ومع ذلك اطبعي Hi مرة واحدة.","x = 100 and x < 5 is false, yet print Hi once.","let x = 100;\n","let x = 100;\ndo {\n  console.log(\"Hi\");\n} while (x < 5);"],
+["حلقة for","The for loop","for(begin; condition; step): البداية مرة، ثم الشرط، ثم الخطوة بعد كل دورة.","for(begin; condition; step): begin once, then the condition, then the step after each round.","for (let i = 0; i < 5; i++) {\n  console.log(\"The number is \" + i);\n}","اطبعي الأعداد الزوجية 2 4 6 8 10 كل رقم في سطر.","Print the even numbers 2 4 6 8 10, one per line.","","for (let i = 2; i <= 10; i += 2) {\n  console.log(i);\n}"],
+["الأمر break","The break statement","يوقف الحلقة فوراً.","Stops the loop immediately.","for (let i = 0; i < 10; i++) {\n  if (i === 5) {\n    break;\n  }\n  console.log(i);\n}","اطبعي من 0 وتوقفي قبل 3 (0 1 2) باستخدام break.","Print 0 1 2 and stop at 3 using break.","for (let i = 0; i < 10; i++) {\n  \n}","for (let i = 0; i < 10; i++) {\n  if (i === 3) {\n    break;\n  }\n  console.log(i);\n}"],
+["الأمر continue","The continue statement","يتخطى الدورة الحالية وينتقل للتي بعدها.","Skips the current round and moves to the next.","for (let i = 0; i < 5; i++) {\n  if (i % 2 === 0) {\n    continue;\n  }\n  console.log(i);\n}","اطبعي 0 1 3 4 (تخطي الرقم 2) باستخدام continue.","Print 0 1 3 4 (skip 2) using continue.","for (let i = 0; i < 5; i++) {\n  \n}","for (let i = 0; i < 5; i++) {\n  if (i === 2) {\n    continue;\n  }\n  console.log(i);\n}"]]],
+["٣. الدوال","3. Functions",[
+["تعريف الدالة","Defining a function","كتلة كود قابلة لإعادة الاستخدام: function name(parameters) { … }","A reusable block of code: function name(parameters) { … }","function greet(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\ngreet(\"Asmaa\");","اكتبي دالة sayHi(name) تطبع Hi, Ali لما نستدعيها sayHi(\"Ali\").","Write sayHi(name) that prints Hi, Ali when called as sayHi(\"Ali\").","","function sayHi(name) {\n  console.log(\"Hi, \" + name);\n}\nsayHi(\"Ali\");"],
+["Parameters و Arguments و return","Parameters, arguments & return","Parameters أسماء في التعريف، Arguments القيم وقت الاستدعاء، و return يرجّع الناتج.","Parameters are names in the definition, arguments are the values you pass, return gives back a result.","function add(num1, num2) {\n  return num1 + num2;\n}\nlet result = add(3, 4);\nconsole.log(result);","اكتبي دالة mul(a, b) ترجّع a*b، واطبعي mul(6, 7).","Write mul(a, b) that returns a*b and print mul(6, 7).","","function mul(a, b) {\n  return a * b;\n}\nconsole.log(mul(6, 7));"],
+["Function expression و Arrow function","Function expression vs arrow","الاتنين طريقتين لتعريف دالة داخل متغير؛ الـ Arrow أقصر باستخدام =>","Two ways to store a function in a variable; the arrow form is shorter, using =>","const multiply = function (x, y) {\n  return x * y;\n};\nlet multiply2 = (x, y) => x * y;\nconsole.log(multiply(2, 5), multiply2(3, 4));","اكتبي arrow function باسم square ترجّع x*x، واطبعي square(9).","Write an arrow function square that returns x*x and print square(9).","","const square = x => x * x;\nconsole.log(square(9));"],
+["النطاق Scope","Scope","Global: متاح في كل مكان. Local: داخل الدالة فقط.","Global: available everywhere. Local: only inside the function.","let g = \"global\";\nfunction f() {\n  let l = \"local\";\n  console.log(g, l);\n}\nf();\nconsole.log(typeof l);","عرّفي total = 10 خارج الدالة، ودالة addFive تطبع total + 5، ثم استدعيها.","Define total = 10 outside, a function addFive that prints total + 5, then call it.","","let total = 10;\nfunction addFive() {\n  console.log(total + 5);\n}\naddFive();"]]],
+["٤. الدوال الجاهزة","4. Built-in functions",[
+["دوال Math","Math functions","abs و ceil و floor و round و max و min و random.","abs, ceil, floor, round, max, min, random.","console.log(Math.abs(-7));\nconsole.log(Math.ceil(4.1));\nconsole.log(Math.floor(4.9));\nconsole.log(Math.round(4.5));\nconsole.log(Math.max(3, 9, 2), Math.min(3, 9, 2));\nconsole.log(Math.random());","اطبعي Math.max(4, 12, 7) ثم Math.floor(8.9) كل واحد في سطر.","Print Math.max(4, 12, 7) then Math.floor(8.9), each on its own line.","","console.log(Math.max(4, 12, 7));\nconsole.log(Math.floor(8.9));"],
+["دوال النصوص","String functions","length و toUpperCase و toLowerCase و indexOf و substring و trim.","length, toUpperCase, toLowerCase, indexOf, substring, trim.","const text = \"Hello World\";\nconsole.log(text.length);\nconsole.log(text.toUpperCase());\nconsole.log(text.indexOf(\"World\"));\nconsole.log(text.substring(6, 11));\nconsole.log(\"  hi  \".trim());","text = \"  Hello JS  \": احذفي المسافات ثم حوّليه لحروف كبيرة.","text = \"  Hello JS  \": trim it then make it uppercase.","const text = \"  Hello JS  \";\n","const text = \"  Hello JS  \";\nconsole.log(text.trim().toUpperCase());"],
+["دوال التاريخ","Date functions","new Date() و getFullYear و getMonth (من 0) و getDate و getDay (0 = الأحد).","new Date(), getFullYear, getMonth (0-based), getDate, getDay (0 = Sunday).","const d = new Date(2025, 5, 7);\nconsole.log(d.getFullYear());\nconsole.log(d.getMonth());\nconsole.log(d.getDate());\nconsole.log(d.getDay());","const d = new Date(2025, 5, 7): اطبعي السنة ثم الشهر.","With d = new Date(2025, 5, 7): print the year, then the month.","const d = new Date(2025, 5, 7);\n","const d = new Date(2025, 5, 7);\nconsole.log(d.getFullYear());\nconsole.log(d.getMonth());"]]]];
+const app=$("#app");let ek=0;
+const edHTML=(code,id,task)=>`<div class="ed" id="${id}"><textarea spellcheck="false" autocapitalize="off" autocomplete="off" rows="${Math.max(3,code.split("\n").length)}">${esc(code)}</textarea><div class="ctl"><button class="bt run">▶ شغّل / Run</button>${task!=null?`<button class="bt y chk">✔ تحقق / Check</button><button class="bt g sol">💡 الحل / Solution</button>`:""}</div><div class="out" aria-live="polite"></div></div>`;
+const SOL={};
+app.insertAdjacentHTML("beforeend",`<section id="learn" hidden><h2>الشرح مع التطبيق العملي<small>Lesson with hands-on practice</small></h2><p style="margin-bottom:6px">كل نقطة فيها: شرح ← مثال تشغّلينه ← مهمة تكتبي كودها وتشوفي الناتج. / Each part: explanation → a runnable example → a task for you to code.</p>${S.map(s=>`<div class="sec">${s[0]}<small>${s[1]}</small></div>${s[2].map(it=>{const a=++ek;SOL["t"+a]=it[8];return `<div class="it"><h3>${it[0]} <span>· ${it[1]}</span></h3><div class="two"><p dir="rtl">${it[2]}</p><p dir="ltr">${it[3]}</p></div><div class="lb">① مثال / Example</div>${edHTML(it[4],"e"+a)}<div class="lb">② دورك / Your turn</div><div class="two"><p dir="rtl">${it[5]}</p><p dir="ltr">${it[6]}</p></div>${edHTML(it[7],"t"+a,1)}</div>`}).join("")}`).join("")}</section>`);
+app.addEventListener("click",e=>{const b=e.target.closest(".run,.chk,.sol");if(!b)return;const ed=b.closest(".ed"),ta=ed.querySelector("textarea"),o=ed.querySelector(".out");
+if(b.classList.contains("sol")){ta.value=SOL[ed.id];ta.rows=ta.value.split("\n").length+1;return}
+const r=exec(ta.value,{});const txt=r.out.join("\n");
+if(b.classList.contains("run")){o.className="out";o.textContent=(txt||"")+(r.err?"\n⚠ "+r.err:"")||"(no output / لا يوجد ناتج)";return}
+const ex=exec(SOL[ed.id],{}).out.join("\n");const good=!r.err&&txt.trim()==ex.trim();
+o.className="out "+(good?"ok":"no");o.textContent=(good?"✅ صح! الناتج / Correct! Output:\n"+txt:"❌ مش مظبوط / Not yet.\nناتجك / Yours:\n"+(txt||"(nothing)")+(r.err?"\n⚠ "+r.err:"")+"\nالمطلوب / Expected:\n"+ex)});
+/* ---------- QUESTION BANK ---------- */
+const T=["True","False"],TA=["صح","خطأ"];
+const Q=[
+{k:"tf",n:6,en:"The ternary operator is a shorter way to write if...else.",ar:"العامل الثلاثي طريقة أقصر لكتابة if...else.",a:0,x:["صح: condition ? v1 : v2","True: condition ? v1 : v2"]},
+{k:"tf",n:7,en:"The continue statement exits the loop entirely.",ar:"الأمر continue يخرج من الحلقة بالكامل.",a:1,x:["الذي يخرج هو break؛ continue يتخطى الدورة فقط.","break exits; continue only skips the current round."]},
+{k:"tf",n:8,en:"Math.random() can return exactly 1.",ar:"Math.random() قد يرجّع الرقم 1 بالضبط.",a:1,x:["يرجّع من 0 (شامل) إلى 1 (غير شامل).","It returns 0 (inclusive) up to 1 (exclusive)."]},
+{k:"tf",n:10,en:"A do...while loop executes its code block at least once.",ar:"حلقة do...while تنفّذ الكود مرة واحدة على الأقل.",a:0,x:["لأنها تفحص الشرط بعد التنفيذ.","Because it checks the condition after running."]},
+{k:"mc",n:18,en:"Which keyword checks multiple conditions after an if statement?",ar:"أي كلمة تفحص شروطاً متعددة بعد if؟",o:["loop","else if","switch","else"],a:1,x:["else if.","else if."]},
+{k:"mc",n:19,en:"How many times will this loop run?",ar:"كم مرة تعمل هذه الحلقة؟",c:"for (let i = 0; i < 5; i++) {\n  console.log(i);\n}",o:["5","4","6","0"],a:0,x:["i = 0,1,2,3,4 → 5 مرات.","i = 0,1,2,3,4 → 5 times."]},
+{k:"mc",n:20,en:"Which loop always runs its code at least once?",ar:"أي حلقة تعمل مرة على الأقل دائماً؟",o:["for...in","for","do...while","while"],a:2,x:["do...while.","do...while."]},
+{k:"mc",n:21,en:"What does Math.floor(4.9) return?",ar:"ماذا ترجّع Math.floor(4.9)؟",o:["5","4.5","4.9","4"],a:3,x:["floor يقرّب لأسفل.","floor rounds down."]},
+{k:"mc",n:22,en:"What does \"Hello\".toUpperCase() return?",ar:"ماذا ترجّع \"Hello\".toUpperCase()؟",o:["\"HELLO\"","\"hElLo\"","\"Hello\"","\"hello\""],a:0,x:["حروف كبيرة.","All capitals."]},
+{k:"mc",n:23,en:"How do you declare a function in JavaScript?",ar:"كيف نعرّف دالة؟",o:["function myFunc() {}","const myFunc = function() {}","const myFunc = () => {}","All of the above"],a:3,x:["كل الطرق صحيحة.","All three are valid."]},
+{k:"mc",n:24,en:"What does a function return if it has no return statement?",ar:"ماذا ترجّع الدالة التي ليس بها return؟",o:["undefined","0","null","An empty string"],a:0,x:["undefined.","undefined."]},
+{k:"mc",n:25,en:"Which of the following is an arrow function?",ar:"أي مما يلي دالة سهمية؟",o:["function() {}","[] => {}","() -> {}","() => {}"],a:3,x:["() => {}","() => {}"]},
+{k:"fl",n:29,en:"The ........ statement skips the current loop iteration and moves on to the next one.",ar:"الأمر ........ يتخطى الدورة الحالية وينتقل للتالية.",r:/^continue$/i,x:["continue","continue"]},
+{k:"fl",n:30,en:"The actual values passed to a function when it is called are called ........",ar:"القيم الفعلية التي نمررها للدالة عند استدعائها تسمى ........",r:/^arguments?$/i,x:["arguments","arguments"]},
+{k:"fl",n:95,en:"Output of: for (let i = 0; i < 10; i++) { if (i === 5) { break; } console.log(i); }  (numbers separated by spaces)",ar:"ناتج الكود: حلقة تطبع i وتتوقف عند 5 (اكتبي الأرقام بمسافات).",r:/^0 1 2 3 4$/,x:["0 1 2 3 4","0 1 2 3 4"]},
+{k:"fl",n:96,en:"Output of: for (let i = 0; i < 5; i++) { if (i % 2 === 0) { continue; } console.log(i); }  (separated by spaces)",ar:"ناتج حلقة تتخطى الأرقام الزوجية من 0 إلى 4 (بمسافات).",r:/^1 3$/,x:["1 3","1 3"]},
+{k:"fl",n:99,en:"Output of the switch where games = 'football' and case \"football\" prints \"I love football!\"",ar:"ناتج switch عندما games = 'football'.",r:/^i love football!?$/i,x:["I love football!","I love football!"]},
+{k:"cd",n:97,en:"Write a function named add that takes two numbers and returns their sum, then call it with 3 and 4 (print the result).",ar:"اكتبي دالة add تأخذ رقمين وترجّع مجموعهما، ثم استدعيها بـ 3 و4 واطبعي الناتج.",st:"",sol:"function add(a, b) {\n  return a + b;\n}\nconsole.log(add(3, 4));"},
+{k:"cd",n:98,en:"Use the ternary operator to store 'pass' if marks >= 40, otherwise 'fail' (then print result).",ar:"استخدمي العامل الثلاثي لتخزين pass لو marks ≥ 40 وإلا fail، ثم اطبعي result.",st:"let marks = 50;\n",sol:"let marks = 50;\nlet result = marks >= 40 ? \"pass\" : \"fail\";\nconsole.log(result);"},
+{k:"es",n:65,en:"Define a conditional statement.",ar:"عرّف الجملة الشرطية.",s:["جملة تنفّذ كوداً معيناً فقط عند تحقق شرط معين (true).","A statement that runs some code only if a condition is true."]},
+{k:"es",n:69,en:"Define the ternary operator and write its syntax.",ar:"عرّف العامل الثلاثي واكتب صيغته.",s:["اختصار لـ if…else يرجّع قيمة: condition ? expression1 : expression2.","A shorthand for if…else that returns a value: condition ? expression1 : expression2."]},
+{k:"es",n:71,en:"Explain the switch statement and how it works.",ar:"اشرح جملة switch وكيف تعمل.",s:["تفحص التعبير مرة واحدة وتقارنه بكل case، وعند التطابق تنفّذ الكود المناسب، ولو لم يوجد تطابق تنفّذ default.","It checks the expression once, compares it with each case, runs the matching code, and runs default if nothing matches."]},
+{k:"es",n:74,en:"Mention the three categories of loops in JavaScript.",ar:"اذكر أنواع الحلقات الثلاثة.",s:["while و do…while و for.","while, do…while and for."]},
+{k:"es",n:76,en:"Compare between while and do...while loops.",ar:"قارن بين while و do…while.",s:["while تفحص الشرط أولاً فقد لا تنفّذ أبداً؛ do…while تنفّذ مرة على الأقل ثم تفحص الشرط.","while checks the condition first and may never run; do…while runs once, then checks the condition."]},
+{k:"es",n:80,en:"Compare between break and continue.",ar:"قارن بين break و continue.",s:["break يوقف الحلقة بالكامل، continue يتخطى الدورة الحالية فقط ويكمل الحلقة.","break exits the loop entirely; continue skips only the current round and continues the loop."]},
+{k:"es",n:82,en:"Compare between parameters and arguments.",ar:"قارن بين Parameters و Arguments.",s:["Parameters متغيرات في تعريف الدالة (placeholders)، Arguments القيم الفعلية عند الاستدعاء.","Parameters are placeholders in the definition; arguments are the actual values passed when calling."]},
+{k:"es",n:85,en:"Compare between global scope and local scope.",ar:"قارن بين النطاق العام والمحلي.",s:["Global: متغيرات خارج الدوال متاحة في كل مكان. Local: متغيرات داخل دالة لا تُرى خارجها.","Global: declared outside functions, available everywhere. Local: declared inside a function, available only there."]},
+{k:"es",n:100,en:"Define a callback function.",ar:"عرّف دالة الـ Callback.",s:["دالة تُمرَّر كوسيط (argument) لدالة أخرى لتُنفَّذ لاحقاً.","A function passed as an argument to another function."]}];
+const st={},norm=s=>s.trim().replace(/[\s,]+/g," ");
+app.insertAdjacentHTML("beforeend",`<section id="quiz" hidden><h2>أسئلة بنك الأسئلة – الدرس 2<small>Question bank – Lesson 2</small></h2><p style="margin-bottom:12px">حلّي كل الأسئلة ثم اضغطي «أظهر الإجابات». / Solve, then press “Show answers”.</p><div id="ql"></div><div class="ctl"><button class="bt" id="qs">أظهر الإجابات / Show answers</button><button class="bt g" id="qr">إعادة / Reset</button><b id="qsc"></b></div></section>`);
+function drawQ(){$("#ql").innerHTML=Q.map((q,i)=>{let b="";
+if(q.k=="tf")b=`<div class="op">${T.map((t,j)=>`<button data-i="${i}" data-j="${j}">${t} · ${TA[j]}</button>`).join("")}</div>`;
+else if(q.k=="mc")b=`<div class="op">${q.o.map((t,j)=>`<button data-i="${i}" data-j="${j}">${"abcd"[j]}. ${esc(t)}</button>`).join("")}</div>`;
+else if(q.k=="fl")b=`<input class="tx" data-i="${i}" placeholder="…">`;
+else if(q.k=="cd")b=edHTML(q.st,"q"+i);else b=`<textarea class="tx" rows="2" placeholder="اكتبي إجابتك / Your answer"></textarea>`;
+return `<div class="qc" id="qc${i}"><div class="q">${q.n}. ${esc(q.en)}<span>${q.ar}</span></div>${q.c?`<div class="cb">${esc(q.c)}</div>`:""}${b}<div class="an" id="an${i}" hidden></div></div>`}).join("");$("#qsc").textContent=""}
+drawQ();
+$("#ql").onclick=e=>{const b=e.target.closest("button[data-i]");if(!b||$("#qs").disabled)return;st[b.dataset.i]=+b.dataset.j;b.parentNode.querySelectorAll("button").forEach(x=>x.classList.toggle("sel",x===b))};
+$("#qs").onclick=()=>{let ok=0,tot=0;Q.forEach((q,i)=>{const c=$("#qc"+i),an=$("#an"+i);let r=null,ans="";
+if(q.k=="fl"){r=q.r.test(norm(c.querySelector("input").value));ans=`${r?"✅":"❌"} ${q.x[0]} / ${q.x[1]}`}
+else if(q.k=="cd"){const u=exec(c.querySelector("textarea").value,{}),m=exec(q.sol,{});r=!u.err&&u.out.join("\n").trim()==m.out.join("\n").trim();ans=`${r?"✅":"❌"} <b>الحل النموذجي / Model solution:</b><div class="cb">${esc(q.sol)}</div>الناتج / Output: <code>${esc(m.out.join(" "))}</code>`}
+else if(q.k=="es"){ans=`<b>الإجابة النموذجية / Model answer:</b><br>${q.s[0]}<br><span dir="ltr">${esc(q.s[1])}</span>`}
+else{r=st[i]===q.a;c.querySelectorAll(".op button").forEach((x,j)=>{if(j==q.a)x.classList.add("ok");else if(j==st[i])x.classList.add("no")});ans=`✔ ${q.k=="tf"?T[q.a]+" · "+TA[q.a]:"abcd"[q.a]+". "+esc(q.o[q.a])}<br>${q.x[0]}<br><span dir="ltr">${esc(q.x[1])}</span>`}
+if(r!==null){tot++;if(r)ok++;c.classList.add(r?"ok":"no")}an.innerHTML=ans;an.hidden=false});$("#qsc").textContent=`${ok} / ${tot}`;$("#qs").disabled=true};
+$("#qr").onclick=()=>{for(const k in st)delete st[k];$("#qs").disabled=false;drawQ()};
+/* ---------- EXERCISES GAME (end-of-lesson exercises 21-40) ---------- */
+const G=[
+["ما وظيفة if؟","What is the purpose of an if statement?","",["To declare a variable","To execute code only if a condition is true","To create a loop","To define a function"],1],
+["ما ناتج هذا الكود؟","What will the code output?","let score = 55;\nif (score >= 60) {\n  console.log(\"Pass\");\n} else {\n  console.log(\"Failed\");\n}",["Pass","Failed","Undefined","Error"],1],
+["أي كلمة تفحص شروطاً متعددة بعد if؟","Which keyword checks multiple conditions after an if?","",["else","switch","else if","loop"],2],
+["ناتج العامل الثلاثي؟","Output of this ternary?","let score = 75;\nlet result = score >= 60 ? \"Pass\" : \"Fail\";\nconsole.log(result);",["Pass","Fail","75","\"75\""],0],
+["ماذا يحدث لو لم يتطابق أي case في switch؟","What happens if no case matches in a switch?","",["The default block executes","The program crashes","Nothing happens","It loops indefinitely"],0],
+["أي حلقة تعمل مرة على الأقل حتى لو الشرط خطأ؟","Which loop executes at least once even if the condition is false?","",["while","do...while","for","forEach"],1],
+["ماذا تطبع حلقة while هذه؟","What will this while loop output?","let i = 3;\nwhile (i < 3) {\n  console.log(i);\n  i++;\n}",["0, 1, 2","3","Nothing","Infinite loop"],2],
+["كم مرة تعمل حلقة for؟","How many times will this for loop run?","for (let i = 0; i < 5; i++) {\n  console.log(i);\n}",["4","0","6","5"],3],
+["ماذا يفعل break في الحلقة؟","What does break do in a loop?","",["Skips the current iteration","Exits the loop entirely","Restarts the loop","Pauses the loop"],1],
+["ناتج مثال continue؟","Output of this continue example?","for (let i = 0; i < 5; i++) {\n  if (i === 2) continue;\n  console.log(i);\n}",["0, 1, 3, 4","0, 1, 2, 3, 4","2","1, 3, 5"],0],
+["كيف نعرّف دالة؟","How do you declare a function?","",["function myFunc() {}","myFunc = function() {}","() => {}","All of the above"],3],
+["ماذا ترجّع هذه الدالة؟","What will this function return?","function add(a, b) {\n  return a + b;\n}\nconsole.log(add(2, 3));",["5","\"23\"","Undefined","NaN"],0],
+["نطاق متغير معرّف داخل دالة؟","Scope of a variable declared inside a function?","",["Global","Local to the function","Both","Depends on let or var"],1],
+["أي مما يلي دالة سهمية؟","Which is an arrow function?","",["function() {}","() => {}","() -> {}","[] => {}"],1],
+["ناتج دالة greet؟","Output?","const greet = name => \"Hello, \" + name + \"!\";\nconsole.log(greet(\"Alice\"));",["Hello, Alice!","\"name\"","Error","undefined"],0],
+["ماذا ترجّع Math.floor(4.9)؟","What does Math.floor(4.9) return?","",["4","5","4.9","4.5"],0],
+["ماذا ترجّع \"Hello\".toUpperCase()؟","What does \"Hello\".toUpperCase() return?","",["\"hello\"","\"HELLO\"","\"Hello\"","\"hElLo\""],1],
+["ناتج indexOf؟","Output of \"Hello World\".indexOf(\"World\")?","",["5","6","7","-1"],1],
+["ماذا ترجّع \" text \".trim()؟","What does \" text \".trim() return?","",["\"text\"","\" text \"","\" text\"","\"\""],0],
+["ماذا ترجّع \"Hello\".substring(1, 3)؟","What does \"Hello\".substring(1, 3) return?","",["\"Hel\"","\"el\"","\"llo\"","\"He\""],1]];
+app.insertAdjacentHTML("beforeend",`<section id="game" hidden><h2>لعبة التدريبات: سباق الأكواد<small>Exercises game: Code Race (the 20 exercises at the end of the lesson)</small></h2><div class="gm" id="gm"></div></section>`);
+let gs,gl,gi,gk,go,gt,gleft,glock;const gm=$("#gm");
+function gstart(){gs=0;gl=3;gi=0;gk=0;go=sh(G.map((_,i)=>i));gask()}
+function gask(){if(gi>=G.length||gl<1)return gend();const q=G[go[gi]];glock=false;gleft=25;const o=sh(q[3].map((t,i)=>[t,i==q[4]]));
+gm.innerHTML=`<div class="hud"><span>⭐ ${gs}</span><span>${gi+1} / ${G.length}</span><span>${"❤️".repeat(gl)}${"🖤".repeat(3-gl)}</span></div><div class="tm"><div id="tb"></div></div><p class="gq">${q[0]}<span>${esc(q[1])}</span></p>${q[2]?`<div class="cb">${esc(q[2])}</div>`:""}<div class="op">${o.map((x,i)=>`<button data-i="${i}">${esc(x[0])}</button>`).join("")}</div><p id="fb" style="margin-top:10px;min-height:2.5em"></p>`;
+gm.onclick=e=>{const b=e.target.closest("button[data-i]");if(b&&!glock)gpick(b,o)};
+clearInterval(gt);gt=setInterval(()=>{gleft-=.1;const t=$("#tb");if(t)t.style.width=gleft/25*100+"%";if(gleft<=0)gpick(null,o)},100)}
+function gpick(b,o){glock=true;clearInterval(gt);const r=b&&o[b.dataset.i][1];
+gm.querySelectorAll(".op button").forEach((x,i)=>{if(o[i][1])x.classList.add("ok");else if(x===b)x.classList.add("no")});
+if(r){gk++;gs+=10+Math.round(gleft/2)+(gk>1?gk*2:0);$("#fb").innerHTML=`✅ صحيح! / Correct! ${gk>1?"🔥 x"+gk:""}`}else{gk=0;gl--;$("#fb").innerHTML=`❌ ${b?"إجابة خاطئة / Wrong":"انتهى الوقت / Time’s up"}`}
+gi++;setTimeout(gask,1700)}
+function gend(){clearInterval(gt);const w=gl>0,s=gs>=330?3:gs>=220?2:1;gm.innerHTML=`<div class="big">${w?"🏆":"💪"}</div><h3>${w?"أنهيتِ كل التدريبات! / All exercises done!":"حاولي مرة أخرى / Try again"}</h3><p class="big" style="font-size:2rem">${w?"⭐".repeat(s):""} ${gs}</p><button class="bt" id="again" style="margin-top:12px;padding:10px 26px">العبي من جديد / Play again</button>`;$("#again").onclick=gstart}
+gm.innerHTML=`<div class="big">🏁</div><p class="gq">${G.length} سؤالاً من تدريبات آخر الدرس · ٣ قلوب · ٢٥ ثانية لكل سؤال<span>${G.length} questions from the lesson exercises · 3 hearts · 25 seconds each</span></p><button class="bt" id="go" style="padding:10px 26px">ابدأ / Start</button>`;$("#go").onclick=gstart;
+/* ---------- CODE ROBOT GAME ---------- */
+const LV=[
+{ar:"المستوى 1: حرّكي الروبوت 8 خطوات إلى العلم 🏁 باستخدام حلقة for و move().",en:"Level 1: move the robot 8 steps to the flag 🏁 using a for loop and move().",len:9,goal:8,stars:[],walls:[],st:"// move() = خطوة للأمام / one step forward\n",hint:"for (let i = 0; i < 8; i++) {\n  move();\n}"},
+{ar:"المستوى 2: اجمعي كل النجوم ⭐ — استخدمي if و onStar() و collect() ثم اوصلي للعلم.",en:"Level 2: collect every star ⭐ — use if, onStar() and collect(), then reach the flag.",len:10,goal:9,stars:[2,4,5,7],walls:[],st:"// onStar() true لو الروبوت على نجمة\n",hint:"for (let i = 0; i < 9; i++) {\n  move();\n  if (onStar()) {\n    collect();\n  }\n}"},
+{ar:"المستوى 3: اقفزي فوق الحواجز 🧱 — استخدمي while و frontBlocked() و jump() و atGoal().",en:"Level 3: jump over the walls 🧱 — use while, frontBlocked(), jump() and atGoal().",len:10,goal:9,stars:[],walls:[3,6],st:"// atGoal() true عند العلم\n",hint:"while (!atGoal()) {\n  if (frontBlocked()) {\n    jump();\n  } else {\n    move();\n  }\n}"},
+{ar:"المستوى 4: عرّفي دالة walk(n) تتحرك n خطوة وتجمع النجوم، ثم استدعيها لتصلي للعلم. (لازم تستخدمي function أو =>)",en:"Level 4: define a function walk(n) that moves n steps and collects stars, then call it to reach the flag. (You must use function or =>)",len:7,goal:6,stars:[1,3,5],walls:[],fn:1,st:"function walk(n) {\n  \n}\n\n",hint:"function walk(n) {\n  for (let i = 0; i < n; i++) {\n    move();\n    if (onStar()) {\n      collect();\n    }\n  }\n}\nwalk(6);"},
+{ar:"المستوى 5 (تحدي): نجوم وحواجز معاً! اجمعي النجوم وتخطي الحواجز واوصلي للعلم.",en:"Level 5 (challenge): stars and walls together! Collect the stars, jump the walls, reach the flag.",len:11,goal:10,stars:[1,5,8],walls:[3,7],st:"",hint:"while (!atGoal()) {\n  if (frontBlocked()) {\n    jump();\n  } else {\n    move();\n  }\n  if (onStar()) {\n    collect();\n  }\n}"}];
+app.insertAdjacentHTML("beforeend",`<section id="code" hidden><h2>لعبة الروبوت: برمجي الروبوت بالكود<small>Code Robot: program the robot with real JavaScript</small></h2><div class="gm" id="rb"></div></section>`);
+let li=0,busy=0,rtm=null;const rb=$("#rb");
+function track(pos,stars,lv,crash){return `<div class="trk">${[...Array(lv.len)].map((_,i)=>`<div class="cl${i==pos?" rb":""}${crash&&i==pos?" cr":""}">${i==pos?(crash?"💥":"🤖"):lv.walls.includes(i)?"🧱":stars.includes(i)?"⭐":i==lv.goal?"🏁":""}</div>`).join("")}</div>`}
+function rshow(){if(li>=LV.length){rb.innerHTML=`<div class="big">🎉</div><h3>أنتِ مبرمجة رائعة! أنهيتِ كل المستويات / You beat every level!</h3><button class="bt" id="rr" style="margin-top:12px;padding:10px 26px">من البداية / Restart</button>`;$("#rr").onclick=()=>{li=0;rshow()};return}
+const lv=LV[li];busy=0;
+rb.innerHTML=`<div class="hud"><span>المستوى / Level ${li+1} / ${LV.length}</span></div><p class="gq">${lv.ar}<span>${lv.en}</span></p><div id="tk">${track(0,lv.stars,lv)}</div><div class="tg"><div class="cb" style="margin-bottom:6px">move() · jump() · collect() · onStar() · frontBlocked() · atGoal()</div></div><div class="ed" id="rbed"><textarea spellcheck="false" autocapitalize="off" rows="8">${esc(lv.st)}</textarea><div class="ctl" style="justify-content:center"><button class="bt" id="rrun">▶ شغّلي الروبوت / Run robot</button><button class="bt g" id="rh">💡 تلميح / Hint</button></div></div><p id="rm" style="min-height:3em;margin-top:8px"></p>`;
+$("#rh").onclick=()=>{$("#rbed textarea").value=lv.hint;$("#rbed textarea").rows=lv.hint.split("\n").length+1};
+$("#rrun").onclick=rrun}
+function rrun(){if(busy)return;const lv=LV[li],code=$("#rbed textarea").value;let pos=0;const stars=new Set(lv.stars),walls=new Set(lv.walls),fr=[],msg=$("#rm");
+const snap=(c)=>fr.push([pos,[...stars],!!c]);const crash=t=>{snap(1);throw new Error(t)};
+const api={move(){const n=pos+1;if(n>=lv.len||walls.has(n))crash("الروبوت اصطدم! / The robot crashed!");pos=n;snap();if(fr.length>400)throw new Error("Too many steps / خطوات كثيرة")},
+jump(){if(!walls.has(pos+1))crash("jump() بتتستخدم قدام حاجز فقط / jump() only works in front of a wall");const n=pos+2;if(n>=lv.len||walls.has(n))crash("مفيش مكان للهبوط! / No landing spot!");pos=n;snap()},
+collect(){stars.delete(pos);snap()},onStar(){return stars.has(pos)},frontBlocked(){return walls.has(pos+1)||pos+1>=lv.len},atGoal(){return pos==lv.goal}};
+const r=exec(code,api);busy=1;msg.textContent="";let k=0;const tk=$("#tk");
+const play=()=>{if(k<fr.length){const f=fr[k++];tk.innerHTML=track(f[0],f[1],lv,f[2]);rtm=setTimeout(play,320);return}
+const won=!r.err&&pos==lv.goal&&stars.size==0&&(!lv.fn||/function|=>/.test(code));
+if(won){msg.innerHTML="✅ ممتاز! الروبوت وصل / Great! The robot made it. 🎉";rtm=setTimeout(()=>{li++;rshow()},1600)}
+else{busy=0;msg.textContent="❌ "+(r.err?r.err:!lv.fn||/function|=>/.test(code)?(pos!=lv.goal?"الروبوت لم يصل للعلم / It didn’t reach the flag.":"باقي نجوم لم تُجمع / Some stars are left."):"لازم تستخدمي دالة / You must use a function.")+" — جربي تاني / try again"}};
+if(!fr.length&&!r.err)tk.innerHTML=track(0,lv.stars,lv);play()}
+rshow();
+/* ---------- routing ---------- */
+function route(){const h=location.hash.slice(1),id=tabs.some(t=>t[0]==h)?h:"learn";clearInterval(gt);clearTimeout(rtm);app.querySelectorAll("section").forEach(s=>s.hidden=s.id!=id);$("#nav").querySelectorAll("button").forEach(b=>b.setAttribute("aria-current",b.dataset.t==id));scrollTo(0,0)}
+$("#nav").onclick=e=>{const b=e.target.closest("button");if(b)location.hash=b.dataset.t};
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
